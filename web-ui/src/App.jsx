@@ -1,18 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DashboardLayout from './components/DashboardLayout';
-import CellTemperaturePage from './components/CellTemperaturePage';
+import React from "react";
+import DashboardLayout from "./components/DashboardLayout";
+import "./index.css";
 
-export default function App() {
+function App() {
   return (
-    <Router>
-      <Routes>
-  <Route path="/" element={<DashboardLayout />} />
-  <Route path="/temperature" element={<CellTemperaturePage />} />
-</Routes>
-    </Router>
+    <div className="App">
+      <DashboardLayout />
+    </div>
   );
 }
+
+export default App;
+
 
 
 

@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const SOHIndicator = ({ soc = 80, soh = 90 }) => {
+const SOHIndicator = ({ soh }) => {
   return (
-    <div className="widget">
-      <h3>Battery Health</h3>
-      <p>State of Charge (SOC): {soc}%</p>
-      <p>State of Health (SOH): {soh}%</p>
+    <div style={{ fontSize: "16px", color: "#333" }}>
+      State of Health (SOH): <strong>{soh}%</strong>
     </div>
   );
 };
 
 export default SOHIndicator;
+

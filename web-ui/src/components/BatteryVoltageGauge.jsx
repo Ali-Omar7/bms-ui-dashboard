@@ -1,12 +1,23 @@
-import React from 'react';
+import React from "react";
 
-const BatteryVoltageGauge = ({ voltage = 3.7 }) => {
+const BatteryVoltageGauge = ({ voltage }) => {
+  const displayVoltage =
+    typeof voltage === "number" ? voltage.toFixed(2) : "--";
+
   return (
-    <div className="widget">
-      <h3>Avg Battery Voltage</h3>
-      <div>{voltage.toFixed(2)} V</div>
+    <div style={{ textAlign: "center" }}>
+      <h2>Avg Battery Voltage</h2>
+      <p style={{ fontSize: "36px", fontWeight: "bold" }}>{displayVoltage} V</p>
     </div>
   );
 };
 
 export default BatteryVoltageGauge;
+
+
+
+
+
+
+
+
